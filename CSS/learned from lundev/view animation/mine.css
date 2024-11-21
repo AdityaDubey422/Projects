@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Odibee+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    background-color: #CBCBCB;
+    color: #2E373A;
+    font-family: "Libre Baskerville", sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin-inline: auto;
+    padding-block-start: 20px;
+    padding-inline: 20px;
+
+    img {
+        height: 40px;
+    }
+}
+
+main {
+    padding-block: 20px;
+    max-width: 1400px;
+    margin-inline: auto;
+    padding-inline: 20px;
+}
+
+.banner {
+    margin-block-start: -20px;
+}
+
+.banner .banner-text {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Odibee Sans", sans-serif;
+}
+
+.banner-text>h1 {
+    font-size: 17rem;
+    text-transform: uppercase;
+}
+
+.banner-text>div {
+    text-align: right;
+    transform: translateY(10px);
+}
+
+.banner-text>div>h2 {
+    text-transform: uppercase;
+    font-size: 7.5rem;
+    font-weight: 200;
+}
+
+.banner-image {
+    background-image: url(images/banner.png);
+    height: 600px;
+    position: relative;
+}
+
+.banner-image img {
+    position: absolute;
+    height: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+.introduce {
+    margin-block-start: 40px;
+}
+
+.introduce>div {
+    background-image: url(images/sich.png);
+    background-size: 1100px;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-position-x: center;
+    position: relative;
+    height: 600px;
+}
+
+.introduce>div>img {
+    position: absolute;
+    left: 446px;
+    height: 475px;
+    bottom: 99px;
+}
+
+.introduce>h2 {
+    font-size: 8rem;
+    text-align: center;
+    margin-top: -110px;
+}
+
+.feature {
+    font-size: 1.7rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    margin-block-start: 30px;
+    min-height: 123vh;
+}
+
+.first-column {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 50px;
+    align-self: flex-end;
+}
+
+.about {
+    font-size: 10.5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.about div:first-child {
+    transform: translateX(-200px);
+}
+
+.about div:nth-child(4) {
+    transform: translateX(150px);
+}
+
+.about div:last-child {
+    text-align: left;
+}
+
+footer {
+    border-top: 1px solid #2E373A55;
+}
+
+.footer {
+    max-width: 1400px;
+    margin-inline: auto;
+    padding: 20px;
+    padding-block-start: 100px;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 1.7rem;
+    gap: 50px;
+}
+
+footer div:nth-child(2) {
+    align-self: center;
+}
+
+footer div:has(img) img {
+    transform: translateY(80px);
+}
+
+.autoRotate {
+    animation: autoRotate linear;
+    animation-timeline: view();
+}
+
+@keyframes autoRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.autoShow {
+    animation: autoShow both;
+    animation-timeline: view(70% 5%);
+}
+
+@keyframes autoShow {
+    from {
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.autoBLur {
+    animation: autoBlur linear both;
+    animation-timeline: view(50% auto);
+}
+
+@keyframes autoBlur {
+    0% {
+        filter: blur(20px);
+    }
+
+    40%,
+    60% {
+        filter: blur(0);
+    }
+
+    100% {
+        filter: blur(20px);
+        }
+    }

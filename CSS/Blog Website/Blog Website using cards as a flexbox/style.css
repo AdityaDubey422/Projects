@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    zoom: 90%;
+}
+
+html {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: white;
+}
+
+.container {
+    width: 63%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 20px 0px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+    padding: 11px 0px;
+}
+
+header h2 {
+    font-size: 3.3rem;
+}
+
+header p {
+    font-size: 1.4rem;
+    width: 50%;
+    text-align: center;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(387px,1fr));
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 8px;
+    gap: 16px;
+    padding-bottom: 10px;
+}
+
+.card a {
+    height: 55%;
+    width: 100%;
+}
+
+.card a img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.card .card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0px 24px;
+}
+
+.card .card-text a {
+    text-decoration: none;
+    color: black;
+    font-size: 2.1rem;
+}
+
+.card .card-text p {
+    font-size: 1.7rem;
+}
+
+.card .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 24px;
+}
+
+.card-footer-left-part {
+    display: flex;
+    gap: 15px;
+}
+
+.card .card-footer .avtar {
+    height: 5rem;
+    width: 5rem;
+    border: 1px solid rgb(150, 147, 147);
+    border-radius: 50%;
+    background-color: rgb(243, 239, 239);
+}
+
+
+.card .card-footer .card-footer-text {
+    font-size: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card .card-footer .card-footer-text p:nth-child(1) {
+    color: blue;
+    font-size: 2.3rem;
+}
+
+.card .card-footer span {
+    font-size: 1.7rem;
+    border: 1px solid black;
+    border-radius: 9px;
+    padding: 10px;
+}
+
+@media (max-width: 1199px) {
+    .container {
+        width: 90%;
+    }
+}

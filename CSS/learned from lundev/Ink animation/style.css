@@ -1,0 +1,51 @@
+html {
+    font-size: 20px;
+}
+
+@font-face {
+    font-family: 'Hallowed Grounds';
+    src: url("HallowedGrounds.otf") format("opentype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+
+}
+
+
+.banner .content h1 {
+    font-weight: normal;
+    font-family: 'Hallowed Grounds';
+    font-size: 6rem;
+
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+
+    mask-image: url(ink-video.gif);
+    mask-size: cover;
+    mask-position: center;
+}
+

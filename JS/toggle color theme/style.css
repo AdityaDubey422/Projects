@@ -1,0 +1,108 @@
+:root {
+    --base-color: white;
+    --button-color: #F6F9FE;
+    --text-color: #111528;
+    --secondary-text: #232738;
+    --svg-fill: #3a435d;
+    --accent-color: #0071ff;
+    --hover: #f5f5f5;
+}
+
+.dark-mode {
+    --base-color: #070b1d;
+    --button-color: #332f5e;
+    --text-color: #ffffff;
+    --secondary-text: #a4a5b8;
+    --svg-fill: rgba(255, 255, 255, 0.851);
+    --accent-color: #0071ff;
+    --hover: #5b54a1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--base-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    gap: 2rem;
+    max-width: 80vw;
+    margin-inline: auto;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+body>p {
+    max-width: 60%;
+    text-align: center;
+    color: var(--secondary-text);
+}
+
+button {
+    align-items: center;
+    appearance: none;
+    background-color: var(--button-color);
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    /* justify-content: center; */
+    gap: 10px;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 15px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1), opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform, opacity;
+    z-index: 0;
+
+    &:hover {
+        background-color: var(--hover);
+        color: #174ea6;
+    }
+
+    svg {
+        fill: var(--svg-fill);
+    }
+
+    p {
+        color: var(--text-color);
+    }
+}
+
+/*controlling displaying of dark mode and light mode icon in css*/
+.dark-mode-svg {
+    display: none;
+}
+
+.dark-mode .dark-mode-svg {
+    display: block;
+}
+
+.dark-mode .light-mode-svg {
+    display: none;
+}

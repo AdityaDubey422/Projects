@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card1 Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+            overflow-x: hidden;
+            background-color: #0093E9;
+            background-image: -webkit-linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+            background-image: -moz-linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+            background-image: -o-linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+            background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background-color: white;
+            width: 300px;
+            height: 410px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            padding: 15px;
+        }
+
+        .card img {
+            height: 235px;
+            border-radius: 10px;
+        }
+
+        .card h2 {
+            font-size: 1.8rem;
+        }
+
+        .cardText {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- CARD -->
+        <div class="card">
+            <!-- CARD IMAGE -->
+            <div class="cardImg">
+
+                <img src="images/qrCode.png" alt="QR Code">
+
+            </div>
+            <!-- CARD TEXT SECTION -->
+            <div class="cardText">
+                <!-- HEADING OF TEXT SECTION  -->
+                <h2>Improve your skills by building projects</h2>
+                <!-- PARAGRAPH OF TEXT SECTION -->
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam ab aperiam doloremque placeat
+                    reiciendis earum.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

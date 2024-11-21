@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.diamond-grid {
+    --img-size: 200px;
+    display: grid;
+    grid-template-columns: repeat(6, calc(var(--img-size) / 2));
+    /* grid-template-rows: repeat(4, calc(var(--img-size) / 2)); */
+    grid-auto-rows: calc(var(--img-size) / 2);
+    gap: 10px;
+}
+
+.diamond-grid img {
+    width: var(--img-size);
+    aspect-ratio: 1;
+    clip-path: path("M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z");
+    object-fit: cover;
+    border-radius: 5px;
+    grid-column: span 2;
+    transition: clip-path 0.25s, filter 0.75s;
+}
+
+img:nth-child(5n-1) {
+    grid-column: 2/ span 2;
+}
+
+img:hover {
+    clip-path: path("M0,0 C0,0 200,0 200,0 200,0 200,100 200,100 200,100 200,200 200,200 200,200 100,200 100,200 100,200 100,200 0,200 0,200 0,100 0,100 0,100 0,100 0,100Z");
+    z-index: 1;
+}
+
+.diamond-grid:has(:hover) img:not(:hover) {
+    filter: brightness(0.5) contrast(0.5);
+}

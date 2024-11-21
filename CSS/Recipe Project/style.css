@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background-image: linear-gradient(101deg, #d4d1d1 0%, #ffffff 100%);
+}
+
+.navContainer {
+    width: 100vw;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    min-height: 73px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 73px;
+    padding: 0px 15px;
+}
+
+nav p {
+    font-size: 2.5rem;
+    color: white;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.7rem;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: all 0.5s 0s linear;
+}
+
+nav a:nth-child(3) {
+    margin-right: 80px;
+}
+
+nav a:hover {
+    text-decoration-color: white;
+}
+
+#navLinks {
+    display: flex;
+    gap: 50px;
+}
+
+.contentBox {
+    width: 70%;
+    margin: 20px auto;
+    border: 1px solid black;
+    background-color: #ffffff7d;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 2.5rem;
+    box-shadow: 3px 3px 15px black;
+}
+
+.item {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fde9e9;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.textBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 17px;
+}
+
+.textBox h1 {
+    font-size: 2.2rem;
+    text-decoration: underline;
+}
+
+.textBox h2 {
+    font-size: 1.7rem;
+}
+
+.contentBox li {
+    font-size: 1.2rem;
+}
+
+.imgBox img {
+    height: 320px;
+    border-radius: 15px;
+    overflow: hidden;
+
+}
+
+.imgBox {
+    transition: all 0.4s 0s linear;
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    background-color: #0d0d0d9a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s 0s linear;
+}
+
+.imgBox:hover {
+    transform: scale(1.03);
+}
+
+.imgBox:hover .overlay {
+    opacity: 1;
+}
+
+
+.footerBox {
+    background-color: #2f424d;
+    text-align: center;
+    min-height: 30px;
+}
+
+.footerBox p {
+    color: white;
+    font-size: 1.4rem;
+}

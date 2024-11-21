@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masonry layout</title>
+    <style>
+        body {
+            background-color: #242223;
+        }
+
+        .masonry-wrapper {
+            position: relative;
+            columns: 400px;
+            width: min(100% - 4rem, 1500px);
+            margin: 5rem auto;
+
+            &:has(:hover) img:not(:hover) {
+                filter: grayscale(1) brightness(0.5);
+            }
+
+            & img {
+                position: relative;
+                width: 100%;
+                margin-bottom: 1rem;
+                transform: scale(1);
+                transition:
+                    filter 500ms,
+                    transform 500ms cubic-bezier(0.87, -2, 0.03, 1.58);
+                /* cubic-beizer beteee */
+
+                &:hover {
+                    transform: scale(1.13);
+                    z-index: 100;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="masonry-wrapper">
+        <img src="images/pokemon1.jpg" alt="">
+        <img src="images/pokemon2.jpg" alt="">
+        <img src="images/pokemon3.jpg" alt="">
+        <img src="images/pokemon4.jpg" alt="">
+        <img src="images/pokemon5.jpg" alt="">
+        <img src="images/pokemon6.jpg" alt="">
+        <img src="images/pokemon7.jpg" alt="">
+        <img src="images/pokemon8.jpg" alt="">
+        <img src="images/pokemon9.jpg" alt="">
+        <img src="images/pokemon10.jpg" alt="">
+        <img src="images/pokemon11.jpg" alt="">
+    </div>
+</body>
+
+</html>
