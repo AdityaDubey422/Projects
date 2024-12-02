@@ -79,6 +79,31 @@ ul[role="list"] {
 }
 
 /* Styling */
+.underline-on-hover {
+    position: relative;
+    width: fit-content;
+}
+
+.underline-on-hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background-color: white;
+    height: 2px;
+    opacity: 0;
+    transition: width 500ms ease-out, opacity 500ms ease-out;
+}
+
+.underline-on-hover:hover::after {
+    width: 100%;
+    opacity: 1;
+}
+
+.link-with-arrow:hover svg {
+    rotate: 30deg;
+}
 
 #mini-circle {
     display: none;
@@ -161,6 +186,7 @@ header {
 
 .bottom-navigation> :nth-child(2) {
     justify-self: center;
+    align-self: flex-start;
 }
 
 .bottom-navigation> :nth-child(3) {
@@ -170,6 +196,11 @@ header {
 .link-with-arrow {
     display: flex;
     gap: 0.5em;
+
+    svg {
+        transition: rotate 200ms ease;
+
+    }
 }
 
 @media (width < 768px) {
@@ -249,7 +280,7 @@ header {
     transition-duration: .7s;
     width: fit-content;
     border: 1px solid hsl(0, 0%, 100%);
-    border-radius: 9999px; 
+    border-radius: 9999px;
 
     &:hover {
         background-color: white;
