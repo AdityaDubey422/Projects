@@ -11,6 +11,7 @@ html {
 }
 
 body {
+    /* width: 100vw; */
     background-color: #CBCBCB;
     color: #2E373A;
     font-family: "Libre Baskerville", sans-serif;
@@ -136,7 +137,8 @@ main {
 }
 
 .about div:nth-child(4) {
-    transform: translateX(150px);
+    transform: translateX(10vw);
+    max-width: 100%;
 }
 
 .about div:last-child {
