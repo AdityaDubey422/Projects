@@ -78,50 +78,50 @@ circleMouseFollower();
 // text animation on page load
 function firstpageAnimation() {
   var tl = gsap.timeline();
-  tl.from("header", {
-    y: "100%",
-    opacity: 0,
+  tl.to("header", {
+    y: 0,
+    opacity: 1,
     ease: "power1.inOut",
     duration: 1,
   });
 
-  tl.from(
+  tl.to(
     ".hero-heading h1",
     {
-      y: "100%",
-      opacity: 0,
+      y: 0,
+      opacity: 1,
       ease: "power1.inOut",
       duration: 1,
     },
     "-=0.5"
   );
 
-  tl.from(
+  tl.to(
     ".hero-heading p",
     {
-      y: "-100%",
-      opacity: 0,
+      y: 0,
+      opacity: 1,
       ease: "power1.inOut",
       duration: 0.5,
     },
     "-=0.3"
   );
 
-  tl.from(
+  tl.to(
     ".availability p",
     {
-      y: "-100%",
-      opacity: 0,
+      y: 0,
+      opacity: 1,
       ease: "power1.inOut",
       duration: 0.5,
     },
     "-=0.3"
   );
 
-  tl.from(
+  tl.to(
     ".bottom-navigation",
     {
-      opacity: 0,
+      opacity: 1,
       ease: "power1.inOut",
       duration: 0.5,
     },
